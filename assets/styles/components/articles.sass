@@ -1,0 +1,53 @@
+.articles
+  margin-bottom: 160px
+  @include media(lg)
+    margin-bottom: 110px
+  @include media(xs)
+    margin-bottom: 60px
+
+.articles__cont
+
+.articles__tag
+  text-align: center
+  margin-bottom: 30px
+
+.articles__title
+  text-align: center
+  margin-bottom: 60px
+  @include media(lg)
+    margin-bottom: 40px
+  @include media(xs)
+    margin-bottom: 20px
+
+.articles__area
+  display: flex
+  gap: 0 30px
+
+.articles__box
+  +bgIcon('articles/articles-card-bg.png')
+  border-radius: 20px
+  min-height: 280px
+  padding: 30px
+  display: flex
+  flex-direction: column
+
+.articles__top
+  display: flex
+  justify-content: space-between
+  margin-bottom: 20px
+
+.articles__headline
+  font-size: 32px
+  line-height: 130%
+  font-family: $font_family_second
+
+.articles__icon
+  margin-top: -20px
+  margin-right: -20px
+  width: 80px
+  height: 80px
+
+.articles__text
+  margin-top: auto
+  font-size: 18px
+  line-height: 140%

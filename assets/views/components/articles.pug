@@ -1,0 +1,19 @@
+-
+  const articlesArea = [
+    { headline: 'Гороскопы', icon: 'ic_articles_1', text: 'Индивидуальные гороскопы на каждый день. Узнайте, что звёзды говорят о вашем будущем.' },
+    { headline: 'Статьи', icon: 'ic_articles_2', text: 'Полезные статьи о знаках Зодиака, астрологии и искусственном интеллекте в астрологии.' },
+    { headline: 'Календарь стрижек', icon: 'ic_articles_3', text: 'Точные даты для стрижек по лунному календарю. Оптимальное время для изменений и обновлений.' },
+  ]
+
+section.articles
+  .articles__cont.cont
+    .articles__tag
+      .tag Про канал
+    h2.articles__title.title Что ждёт Вас на канале
+    .articles__area
+      each box in articlesArea
+        .articles__box
+          .articles__top
+            .articles__headline= box.headline
+            img.articles__icon(src=staticImg(`articles/${box.icon}.svg`) alt='')
+          .articles__text= box.text
