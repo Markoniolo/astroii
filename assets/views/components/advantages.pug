@@ -1,0 +1,33 @@
+-
+  const advantagesList = [
+    {
+      headline: 'Точность',
+      text: 'Благодаря обширной базе данных и работе ИИ, канал может предоставлять прогнозы с высокой степенью точности и достоверности.'
+    },
+    {
+      headline: 'Персонализация контента',
+      text: 'ИИ позволяет создавать персонализированные прогнозы и рекомендации для каждого пользователя на основе его индивидуальных данных и предпочтений.'
+    },
+    {
+      headline: 'Чат-бот',
+      text: 'АстроИИ бот может ответить на волнующие вопросы Вашей судьбы, финансов и отношений'
+    }
+  ]
+
+section.advantages.section
+  .advantages__cont.cont
+    .advantages__tag
+      .tag Почему АстроИИ?
+    h2.advantages__title.title Преимущества ИИ
+    .advantages__wrap
+      .advantages__list.swiper-wrapper
+        each item in advantagesList
+          .advantages__item.swiper-slide
+            .advantages__headline= item.headline
+            .advantages__text= item.text
+      .advantages__slider
+        .swiper-wrapper
+          each slide in [1,2,3]
+            .advantages__slide.swiper-slide
+              picture.advantages__picture
+                img.advantages__image(src=staticImg(`advantages/advantages-${slide}.png`))

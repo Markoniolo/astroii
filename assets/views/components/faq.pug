@@ -1,0 +1,33 @@
+-
+  const faqList = [
+    {
+      headline: 'Как я могу воспользоваться чат-ботом?',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae massa ultrices mi faucibus varius. Etiam placerat efficitur neque ac rhoncus. Etiam vel dictum ante. Nullam scelerisque enim nisl, vel tempor arcu convallis vel. Etiam nibh mauris, imperdiet vel finibus eu, malesuada in magna.'
+    },
+    {
+      headline: 'На чём основывается Ваша нейросеть?',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae massa ultrices mi faucibus varius. Etiam placerat efficitur neque ac rhoncus. Etiam vel dictum ante. Nullam scelerisque enim nisl, vel tempor arcu convallis vel. Etiam nibh mauris, imperdiet vel finibus eu, malesuada in magna.'
+    },
+    {
+      headline: 'Какие аспекты жизни затрагивает нейросеть?',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae massa ultrices mi faucibus varius. Etiam placerat efficitur neque ac rhoncus. Etiam vel dictum ante. Nullam scelerisque enim nisl, vel tempor arcu convallis vel. Etiam nibh mauris, imperdiet vel finibus eu, malesuada in magna.'
+    },
+    {
+      headline: 'Работает ли нейросеть по натальной карте?',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae massa ultrices mi faucibus varius. Etiam placerat efficitur neque ac rhoncus. Etiam vel dictum ante. Nullam scelerisque enim nisl, vel tempor arcu convallis vel. Etiam nibh mauris, imperdiet vel finibus eu, malesuada in magna.'
+    }
+  ]
+
+section.faq.section
+  .faq__cont.cont
+    .faq__tag
+      .tag Вопрос-ответ
+    h2.faq__title.title Есть вопросы?  Мы&nbsp;ответим на них
+    ul.faq__list
+      each item in faqList
+        li.faq__item
+          .faq__top(data-element="faq-top")
+            .faq__headline= item.headline
+            .faq__button
+          .faq__box
+            .faq__text= item.text
