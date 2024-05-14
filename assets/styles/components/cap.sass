@@ -1,9 +1,36 @@
 .cap
-  padding-top: 200px
-  padding-bottom: 200px
+  overflow: hidden
+  margin-top: -80px
+  position: relative
+  padding-top: 300px
+  padding-bottom: 245px
   margin-bottom: 120px
+  background: linear-gradient(180deg, #2a0634 0%, #2d0935 24.51%, #2a0934 47.01%, #25062f 75.1%, #1e042b 100%)
   @include media(lg)
     margin-bottom: 0
+  &::before
+    content: ''
+    background: linear-gradient(180deg, rgba(30, 4, 43, 0) 0%, #1e042b 30.94%)
+    height: 256px
+    position: absolute
+    z-index: 1
+    bottom: -140px
+    left: 0
+    right: 0
+    @include media(lg)
+      height: 140px
+      bottom: -65px
+    @include media(xs)
+      height: 124px
+      bottom: -51px
+  //&::after
+  //  content: ''
+  //  background: linear-gradient(180deg, #2a0634 0%, #2d0935 24.51%, #2a0934 47.01%, #25062f 75.1%, #1e042b 100%)
+  //  position: absolute
+  //  top: -80px
+  //  bottom: 0
+  //  left: 0
+
 
 .cap__cont
 
@@ -11,6 +38,8 @@
   max-width: 690px
 
 .cap__title
+  position: relative
+  z-index: 1
   margin-bottom: 32px
   font-weight: 400
   font-size: 40px
@@ -25,6 +54,8 @@
     font-size: 20px
 
 .cap__text
+  position: relative
+  z-index: 1
   max-width: 465px
   width: 100%
   margin-bottom: 60px
@@ -39,15 +70,27 @@
     font-size: 12px
 
 .cap__link
+  position: relative
+  z-index: 1
+
+.cap__decor
+  position: absolute
+  top: 0
+  left: 0
+  width: 1812px
+  height: 792px
 
 .cap__picture
   position: absolute
-  z-index: -1
+  z-index: 0
   top: 0
   right: 0
   width: 1419px
   @include media(lg)
-    display: none
+    width: 917px
+    top: 80px
 
 .cap__image
-  //height: 972px
+  height: 972px
+  @include media(lg)
+    height: 628px

@@ -17,6 +17,11 @@ $breakpoints: (xxs: 0, xs: 360px, sm: 768px, md: 1024px, lg: 1280px, xl: 1440px,
   @media (max-width: $max)
     @content
 
+@mixin media-up($bp-size)
+  $min: _breakpoint-min($bp-size)
+  @media (min-width: $min)
+    @content
+
 @function _breakpoint-next($bp)
   @if map-has-key($breakpoints, $bp)
     $breakpoint-bps: map-keys($breakpoints)

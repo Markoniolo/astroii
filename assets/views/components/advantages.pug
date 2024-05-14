@@ -14,18 +14,19 @@
     }
   ]
 
-section.advantages.section
+section.advantages.section#advantages
   .advantages__cont.cont
     .advantages__tag
       .tag Почему АстроИИ?
     h2.advantages__title.title Преимущества ИИ
     .advantages__wrap
-      .advantages__list.swiper-wrapper
-        each item in advantagesList
-          .advantages__item.swiper-slide
-            .advantages__headline= item.headline
-            .advantages__text= item.text
-      .advantages__slider
+      .advantages__inner(data-element="advantages__inner")
+        .advantages__list.swiper-wrapper
+          each item in advantagesList
+            .advantages__item.swiper-slide(data-element="advantages__item")
+              .advantages__headline= item.headline
+              .advantages__text= item.text
+      .advantages__slider(data-element="advantages__slider")
         .swiper-wrapper
           each slide in [1,2,3]
             .advantages__slide.swiper-slide

@@ -29,22 +29,32 @@
     max-width: 482px
     margin: 0 auto
 
-.advantages__list
-  flex-direction: column
-  width: calc(50% - 10px)
-  gap: 30px 0
+.advantages__inner
+  width: calc(50% - 15px)
   @include media(lg)
     width: 100%
+
+.advantages__list
+  flex-direction: column
+  gap: 30px 0
+  justify-content: space-between
+  @include media(lg)
     flex-direction: row
-    gap: 0 20px
-  @include media(xs)
-    gap: 0 10px
+  @include media-up(xl)
+    transform: none !important
 
 .advantages__item
+  cursor: pointer
+  height: auto
   padding: 30px
   border-radius: 20px
   +bgIcon('advantages/advantages-item-bg.png')
-  @include media(sm)
+  min-height: 210px
+  opacity: 0.4
+  transition-property: opacity
+  transition-duration: 0.5s
+  @include media(lg)
+    min-height: auto
     padding: 20px
     height: auto
     display: flex
@@ -54,6 +64,9 @@
     padding: 18px
     border-radius: 12px
     +bgIcon('advantages/advantages-item-bg_320.png')
+  &.swiper-slide-active
+    opacity: 1
+    cursor: default
 
 .advantages__headline
   margin-bottom: 33px
@@ -77,7 +90,7 @@
 
 .advantages__slider
   overflow: hidden
-  width: calc(50% - 10px)
+  width: calc(50% - 15px)
   @include media(lg)
     order: -1
     margin-bottom: 30px
@@ -90,3 +103,6 @@
 .advantages__picture
 
 .advantages__image
+  border-radius: 20px
+  @include media(xs)
+    border-radius: 12px

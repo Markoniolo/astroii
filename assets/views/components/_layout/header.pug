@@ -1,9 +1,9 @@
 -
   const headerList = [
-    { text: 'Главная', link: '' },
-    { text: 'О канале', link: '' },
-    { text: 'Преимущества', link: '' },
-    { text: 'Вопрос-ответ', link: '' },
+    { text: 'Главная', link: '#body' },
+    { text: 'О канале', link: '#about' },
+    { text: 'Преимущества', link: '#advantages' },
+    { text: 'Вопрос-ответ', link: '#faq' },
   ]
 
 header.header
@@ -15,6 +15,6 @@ header.header
         ul.header__list
           each item in headerList
             li.header__item
-              a.header__link(href='#')= item.text
+              a.header__link(href=item.link data-role="scroll-to-anchor")= item.text
       button.header__button.btn-white
         span.header__button-span Войти
