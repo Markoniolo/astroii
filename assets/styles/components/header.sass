@@ -4,6 +4,15 @@
   z-index: 100
   backdrop-filter: blur(10px)
 
+.header_mobile-active
+  .header__menu
+    @include media(xs)
+      opacity: 1
+      pointer-events: all
+  .header__burger
+    @include media(xs)
+      +bgIcon('ic_close_white.svg')
+
 .header__cont
 
 .header__area
@@ -11,6 +20,8 @@
   align-items: center
   justify-content: space-between
   height: 80px
+  @include media(xs)
+    justify-content: unset
 
 .header__logo
   width: 165px
@@ -20,13 +31,29 @@
 
 .header__menu
   @include media(xs)
-    display: none
+    padding: 72px 24px 24px
+    position: absolute
+    top: 0
+    z-index: 1
+    right: 0
+    width: 142px
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+    border-left: 1px solid rgba(255, 255, 255, 0.2)
+    border-radius: 0 0 0 20px
+    background: #461153
+    transition-duration: $transition-duration
+    transition-property: opacity
+    pointer-events: none
+    opacity: 0
 
 .header__list
   display: flex
   gap: 0 40px
   @include media(lg)
     gap: 0 20px
+  @include media(xs)
+    flex-direction: column
+    gap: 20px 0
 
 .header__item
 
@@ -34,7 +61,26 @@
   color: $pink
   text-decoration: none
   font-family: $font_family_second
+  font-size: 14px
+  line-height: 130%
+  @include media(xs)
+    font-size: 12px
 
 .header__button
+  @include media(xs)
+    margin-left: auto
+    position: relative
+    z-index: 2
 
 .header__button-span
+
+.header__burger
+  display: none
+  @include media(xs)
+    display: block
+    width: 40px
+    height: 40px
+    margin-left: 18px
+    +bgIcon('ic_burger_white.svg')
+    position: relative
+    z-index: 2

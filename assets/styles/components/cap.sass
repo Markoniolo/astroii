@@ -8,6 +8,9 @@
   background: linear-gradient(180deg, #2a0634 0%, #2d0935 24.51%, #2a0934 47.01%, #25062f 75.1%, #1e042b 100%)
   @include media(lg)
     margin-bottom: 0
+  @include media(xs)
+    padding-top: 80px
+    padding-bottom: 40px
   &::before
     content: ''
     background: linear-gradient(180deg, rgba(30, 4, 43, 0) 0%, #1e042b 30.94%)
@@ -23,23 +26,29 @@
     @include media(xs)
       height: 124px
       bottom: -51px
-  //&::after
-  //  content: ''
-  //  background: linear-gradient(180deg, #2a0634 0%, #2d0935 24.51%, #2a0934 47.01%, #25062f 75.1%, #1e042b 100%)
-  //  position: absolute
-  //  top: -80px
-  //  bottom: 0
-  //  left: 0
-
+  &::after
+    @include media(lg)
+      content: ''
+      background: linear-gradient(90deg, #2d0a38 0%, #290732 21.36%, #2a0936 35.9%, #300c39 49%, #320d3c 62.41%, #370f3c 75.2%, #340e3d 88.66%, #2c0c38 100%), linear-gradient(180deg, rgba(30, 4, 43, 0.28) 0%, rgba(30, 4, 43, 0) 100%)
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      height: 80px
 
 .cap__cont
 
 .cap__area
   max-width: 690px
+  @include media(xs)
+    display: flex
+    flex-direction: column
+    max-width: 320px
+    margin: 0 auto
 
 .cap__title
   position: relative
-  z-index: 1
+  z-index: 2
   margin-bottom: 32px
   font-weight: 400
   font-size: 40px
@@ -55,7 +64,7 @@
 
 .cap__text
   position: relative
-  z-index: 1
+  z-index: 2
   max-width: 465px
   width: 100%
   margin-bottom: 60px
@@ -71,14 +80,24 @@
 
 .cap__link
   position: relative
-  z-index: 1
+  z-index: 2
+  @include media(xs)
+    justify-content: center
 
 .cap__decor
   position: absolute
-  top: 0
-  left: 0
+  z-index: 1
+  top: 111px
+  left: 59px
   width: 1812px
   height: 792px
+  @include media(lg)
+    width: 985px
+    height: 431px
+    top: 94px
+    left: 116px
+  @include media(xs)
+    display: none
 
 .cap__picture
   position: absolute
@@ -89,8 +108,14 @@
   @include media(lg)
     width: 917px
     top: 80px
+  @include media(xs)
+    position: static
+    width: 320px
+    order: -1
 
 .cap__image
   height: 972px
   @include media(lg)
     height: 628px
+  @include media(xs)
+    height: 438px

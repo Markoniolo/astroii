@@ -44,22 +44,23 @@
         <nav class="header__menu">
           <ul class="header__list">
             <li class="header__item">
-              <a class="header__link" href="#">Главная</a>
+              <a class="header__link" href="#body" data-role="scroll-to-anchor">Главная</a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="#">О канале</a>
+              <a class="header__link" href="#about" data-role="scroll-to-anchor">О канале</a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="#">Преимущества</a>
+              <a class="header__link" href="#advantages" data-role="scroll-to-anchor">Преимущества</a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="#">Вопрос-ответ</a>
+              <a class="header__link" href="#faq" data-role="scroll-to-anchor">Вопрос-ответ</a>
             </li>
           </ul>
         </nav>
         <button class="header__button btn-white">
           <span class="header__button-span">Войти</span>
         </button>
+        <button class="header__burger" data-element="header__burger"></button>
       </div>
     </div>
   </header>
@@ -70,13 +71,14 @@
           <h1 class="cap__title">АстроИИ: Ваш персональный астрологический помощник, обученный искусственным интеллектом</h1>
           <div class="cap__text">10 лет обучения нейросети для точных и&nbsp;персонализированных гороскопов</div>
           <a class="cap__link btn-pink" href="#" target="_blank">Перейти на канал</a>
+          <img class="cap__decor" src="statics/img/cap/cap-decor.svg" alt="">
           <picture class="cap__picture">
             <img class="cap__image" src="statics/img/cap/cap-1.jpg">
           </picture>
         </div>
       </div>
     </section>
-    <section class="about section">
+    <section class="about section" id="about">
       <div class="about__cont cont">
         <div class="about__wrap">
           <div class="about__area">
@@ -131,28 +133,30 @@
         </div>
       </div>
     </section>
-    <section class="advantages section">
+    <section class="advantages section" id="advantages">
       <div class="advantages__cont cont">
         <div class="advantages__tag">
           <div class="tag">Почему АстроИИ?</div>
         </div>
         <h2 class="advantages__title title">Преимущества ИИ</h2>
         <div class="advantages__wrap">
-          <div class="advantages__list swiper-wrapper">
-            <div class="advantages__item swiper-slide">
-              <div class="advantages__headline">Точность</div>
-              <div class="advantages__text">Благодаря обширной базе данных и работе ИИ, канал может предоставлять прогнозы с высокой степенью точности и достоверности.</div>
-            </div>
-            <div class="advantages__item swiper-slide">
-              <div class="advantages__headline">Персонализация контента</div>
-              <div class="advantages__text">ИИ позволяет создавать персонализированные прогнозы и рекомендации для каждого пользователя на основе его индивидуальных данных и предпочтений.</div>
-            </div>
-            <div class="advantages__item swiper-slide">
-              <div class="advantages__headline">Чат-бот</div>
-              <div class="advantages__text">АстроИИ бот может ответить на волнующие вопросы Вашей судьбы, финансов и отношений</div>
+          <div class="advantages__inner" data-element="advantages__inner">
+            <div class="advantages__list swiper-wrapper">
+              <div class="advantages__item swiper-slide" data-element="advantages__item">
+                <div class="advantages__headline">Точность</div>
+                <div class="advantages__text">Благодаря обширной базе данных и работе ИИ, канал может предоставлять прогнозы с высокой степенью точности и достоверности.</div>
+              </div>
+              <div class="advantages__item swiper-slide" data-element="advantages__item">
+                <div class="advantages__headline">Персонализация контента</div>
+                <div class="advantages__text">ИИ позволяет создавать персонализированные прогнозы и рекомендации для каждого пользователя на основе его индивидуальных данных и предпочтений.</div>
+              </div>
+              <div class="advantages__item swiper-slide" data-element="advantages__item">
+                <div class="advantages__headline">Чат-бот</div>
+                <div class="advantages__text">АстроИИ бот может ответить на волнующие вопросы Вашей судьбы, финансов и отношений</div>
+              </div>
             </div>
           </div>
-          <div class="advantages__slider">
+          <div class="advantages__slider" data-element="advantages__slider">
             <div class="swiper-wrapper">
               <div class="advantages__slide swiper-slide">
                 <picture class="advantages__picture">
@@ -174,7 +178,7 @@
         </div>
       </div>
     </section>
-    <section class="faq section">
+    <section class="faq section" id="faq">
       <div class="faq__cont cont">
         <div class="faq__tag">
           <div class="tag">Вопрос-ответ</div>

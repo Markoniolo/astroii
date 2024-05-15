@@ -1,4 +1,4 @@
-const indent = 90
+const indent = 80
 
 if (document.querySelector('[data-role="scroll-to-anchor"]')) initScrollToAnchor()
 
