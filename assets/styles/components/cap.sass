@@ -9,7 +9,7 @@
   @include media(lg)
     margin-bottom: 0
   @include media(xs)
-    padding-top: 80px
+    padding-top: 50px
     padding-bottom: 40px
   &::before
     content: ''
@@ -25,7 +25,9 @@
       bottom: -65px
     @include media(xs)
       height: 124px
-      bottom: -51px
+      bottom: unset
+      top: 450px
+      background: linear-gradient(180deg, rgba(30, 4, 43, 0) 0%, #1e042b 32.14%)
   &::after
     @include media(lg)
       content: ''
@@ -35,6 +37,9 @@
       left: 0
       right: 0
       height: 80px
+    @include media(xs)
+      height: 50px
+      background: linear-gradient(90deg, #2d0c3b 0%, #340e3d 21.36%, #37103f 49%, #330d3e 81.65%, #2c0c38 100%)
 
 .cap__cont
 
@@ -43,8 +48,7 @@
   @include media(xs)
     display: flex
     flex-direction: column
-    max-width: 320px
-    margin: 0 auto
+    max-width: 100%
 
 .cap__title
   position: relative
@@ -83,6 +87,8 @@
   z-index: 2
   @include media(xs)
     justify-content: center
+    max-width: 320px
+    width: 100%
 
 .cap__decor
   position: absolute
@@ -110,7 +116,8 @@
     top: 80px
   @include media(xs)
     position: static
-    width: 320px
+    width: calc(100% + 40px)
+    margin: 0 -20px 16px
     order: -1
 
 .cap__image
@@ -119,3 +126,4 @@
     height: 628px
   @include media(xs)
     height: 438px
+    object-fit: cover

@@ -2,7 +2,7 @@
   position: sticky
   top: -1px
   z-index: 100
-  backdrop-filter: blur(10px)
+  //backdrop-filter: blur(10px)
 
 .header_mobile-active
   .header__menu
@@ -22,6 +22,7 @@
   height: 80px
   @include media(xs)
     justify-content: unset
+    height: 60px
 
 .header__logo
   width: 165px
@@ -45,6 +46,16 @@
     transition-property: opacity
     pointer-events: none
     opacity: 0
+    &::before
+      content: ''
+      background-color: $orange
+      width: 273px
+      height: 273px
+      border-radius: 50%
+      filter: blur(70px)
+      position: absolute
+      top: -172px
+      right: -167px
 
 .header__list
   display: flex
