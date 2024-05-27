@@ -1,0 +1,13 @@
+extends ../components/_layout/layout
+
+block head
+  +title('Личный кабинет')
+
+block body
+  .office-wrap
+    include ../components/office/sidebar
+    include ../components/office/office
+    include ../components/modals/advice
+    include ../components/modals/balance
+    include ../components/modals/success
+    include ../components/modals/wrong

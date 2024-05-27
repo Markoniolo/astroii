@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2, minimum-scale=1.0">
+  <meta name="author" content="Цифровые инвестиции">
+  <meta name="description" content="АстроИИ">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preload" href="statics/fonts/Mulish-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="statics/fonts/Lack-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="statics/css/main.css" />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="statics/img/favicon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="statics/img/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="statics/img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="statics/img/favicon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="statics/img/favicon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="statics/img/favicon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="statics/img/favicon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="statics/img/favicon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="statics/img/favicon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="statics/img/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="statics/img/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="statics/img/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="statics/img/favicon/favicon-128.png" sizes="128x128">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="statics/img/favicon/mstile-144x144.png">
+  <meta name="msapplication-square70x70logo" content="statics/img/favicon/mstile-70x70.png">
+  <meta name="msapplication-square150x150logo" content="statics/img/favicon/mstile-150x150.png">
+  <meta name="msapplication-wide310x150logo" content="statics/img/favicon/mstile-310x150.png">
+  <meta name="msapplication-square310x310logo" content="statics/img/favicon/mstile-310x310.png">
+  <link rel="icon" href="statics/img/favicon/favicon.ico" type="image/x-icon">
+  <title>Личный кабинет</title>
+  <meta property="og:title" content="Личный кабинет" />
+</head>
+
+<body id="body">
+  <main class="wrapper">
+    <div class="office-wrap">
+      <div class="sidebar" data-element="sidebar">
+        <div class="sidebar__inner">
+          <button class="sidebar__close" data-element="sidebar__close">
+            <img class="sidebar__close-icon" src="statics/img/ic_sidebar_close.svg" alt="">
+          </button>
+          <button class="sidebar__arrow-close" data-element="sidebar__arrow-close">
+            <div class="sidebar__hint hint">Закрыть боковую панель</div>
+          </button>
+          <div class="sidebar__title">Мои консультации</div>
+          <label class="sidebar__search">
+            <input class="sidebar__search-input input" placeholder="Поиск" type="text">
+          </label>
+          <button class="sidebar__consult btn-pink">Новая консультация</button>
+        </div>
+      </div>
+      <div class="sidebar__layer" data-element="sidebar__layer"></div>
+      <section class="office">
+        <button class="office__sidebar-open" data-element="office__sidebar-open">
+          <svg width="44" height="72" viewbox="0 0 44 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.0186 28.5466C18.5307 27.3268 19.4291 26 20.7428 26C21.5021 26 22.1849 26.4623 22.4669 27.1673L25.4058 34.5144C25.7872 35.4681 25.7872 36.5319 25.4058 37.4856L22.4669 44.8327C22.1849 45.5377 21.5021 46 20.7428 46C19.4291 46 18.5307 44.6732 19.0186 43.4534L21.4058 37.4856C21.7872 36.5319 21.7872 35.4681 21.4058 34.5144L19.0186 28.5466Z"></path>
+          </svg>
+          <div class="office__sidebar-hint hint">Открыть боковую панель</div>
+        </button>
+        <div class="office__cont">
+          <div class="office__header">
+            <picture class="office__logo">
+              <source srcset="statics/img/logo-circle.svg" media="(max-width: 767px)">
+              <img class="office__logo-image" src="statics/img/logo.svg" alt="">
+            </picture>
+            <a class="office__balance btn-pink" href="#balance" data-fancybox>0 токенов</a>
+            <button class="office__user" data-element="office__user">
+              <img class="office__user-image" src="statics/img/ic_user.svg" alt="">
+            </button>
+            <div class="office__popup" data-element="office__popup">
+              <div class="office__popup-user">
+                <img class="office__popup-avatar" src="statics/img/ic_user.svg" alt="">
+                <div class="office__popup-user-box">
+                  <div class="office__popup-name">Анна Смирнова</div>
+                  <div class="office__popup-email">test.email@test.com</div>
+                </div>
+              </div>
+              <div class="office__popup-box">
+                <a class="office__popup-line" href="#">
+                  <img class="office__popup-line-icon" src="statics/img/ic_settings.svg" alt="">
+                  <div class="office__popup-line-span">Настройки</div>
+                </a>
+                <a class="office__popup-line" href="#settings" data-fancybox>
+                  <img class="office__popup-line-icon" src="statics/img/ic_help.svg" alt="">
+                  <div class="office__popup-line-span">Помощь</div>
+                </a>
+              </div>
+              <div class="office__popup-box">
+                <a class="office__popup-line" href="#help" data-fancybox>
+                  <img class="office__popup-line-icon" src="statics/img/ic_exit.svg" alt="">
+                  <div class="office__popup-line-span">Выйти</div>
+                </a>
+              </div>
+            </div>
+            <button class="office__burger" data-element="office__burger">
+              <img class="office__burger-icon" src="statics/img/ic_office_burger.svg" alt="">
+            </button>
+          </div>
+          <div class="office__area">
+            <img class="office__icon" src="statics/img/logo-circle.svg" alt="">
+            <div class="office__title">Как я могу Вам помочь?</div>
+            <div class="office__text">
+              Узнайте возможности и советы по тому, как правильно формулировать вопрос для нейросети -
+              <a href="#advice" data-fancybox>здесь.</a>
+            </div>
+          </div>
+          <label class="office__search">
+            <input class="office__search-input input input_white" placeholder="Сообщение для АстроИИ" type="text">
+            <img class="office__search-icon" src="statics/img/search-icon-arrow.svg" alt="">
+          </label>
+        </div>
+      </section>
+      <div class="office-modal" id="advice">
+        <div class="office-modal__inner">
+          <div class="office-modal__title">Как формулировать вопрос для&nbsp;нейросети?</div>
+          <div class="office-modal__description">Равным образом новая модель организационной деятельности требуют от нас анализа направлений прогрессивного развития. С другой стороны новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Задача организации, в особенности же дальнейшее развитие различных форм деятельности позволяет оценить значение новых предложений. Значимость этих проблем настолько очевидна, что консультация с широким активом влечет за собой процесс внедрения и модернизации систем массового участия.
+            <br>
+            <br>Товарищи! рамки и место обучения кадров играет важную роль в формировании систем массового участия. Задача организации, в особенности же новая модель организационной деятельности влечет за собой процесс внедрения и модернизации систем массового участия.
+          </div>
+        </div>
+      </div>
+      <div class="balance" id="balance">
+        <div class="balance__inner">
+          <div class="balance__top">
+            <div class="balance__wrap">
+              <div class="balance__title balance__title_nowrap">Ваш баланс</div>
+              <div class="balance__now">
+                <span class="balance__now-value">100</span>
+                токенов
+              </div>
+            </div>
+            <div class="balance__text">
+              Товарищи! рамки и место обучения кадров играет важную роль в формировании систем массового участия.
+              Задача организации, в особенности же новая модель организационной деятельности влечет за собой процесс
+              внедрения и модернизации систем массового участия.
+            </div>
+          </div>
+          <div class="balance__bottom">
+            <div class="balance__title">Выберите пакет для пополнения</div>
+            <div class="balance__list">
+              <a class="balance__item" href="#success" data-fancybox data-close-fancybox>
+                <picture class="balance__picture">
+                  <img class="balance__image" src="statics/img/balance/ic_balance_token_1.png" alt="">
+                </picture>
+                <div class="balance__count">5 токенов</div>
+                <div class="balance__price btn-pink">500 руб.</div>
+              </a>
+              <a class="balance__item" href="#success" data-fancybox data-close-fancybox>
+                <picture class="balance__picture">
+                  <img class="balance__image" src="statics/img/balance/ic_balance_token_2.png" alt="">
+                </picture>
+                <div class="balance__count">10 токенов</div>
+                <div class="balance__price btn-pink">1 000 руб.</div>
+              </a>
+              <a class="balance__item" href="#wrong" data-fancybox data-close-fancybox>
+                <picture class="balance__picture">
+                  <img class="balance__image" src="statics/img/balance/ic_balance_token_3.png" alt="">
+                </picture>
+                <div class="balance__count">15 токенов</div>
+                <div class="balance__price btn-pink">1 500 руб.</div>
+              </a>
+              <a class="balance__item" href="#wrong" data-fancybox data-close-fancybox>
+                <picture class="balance__picture">
+                  <img class="balance__image" src="statics/img/balance/ic_balance_token_4.png" alt="">
+                </picture>
+                <div class="balance__count">50 токенов</div>
+                <div class="balance__price btn-pink">5 000 руб.</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="office-modal office-modal_success" id="success">
+        <div class="office-modal__inner">
+          <img class="office-modal__success-icon" src="statics/img/office-modal-success-icon.svg" alt="">
+          <div class="office-modal__title">Пополнено!</div>
+          <div class="office-modal__text">Поздравляем с приобретением токенов! Они начислятся на Ваш счёт в ближайшее время</div>
+        </div>
+      </div>
+      <div class="office-modal office-modal_success" id="wrong">
+        <div class="office-modal__inner">
+          <img class="office-modal__success-icon" src="statics/img/office-modal-wrong-icon.svg" alt="">
+          <div class="office-modal__title">Упс... Что-то пошло не так</div>
+          <div class="office-modal__text">Возможно, случилась ошибка оплаты или другая неполадка</div>
+          <a class="office-modal__button btn-pink" href="#balance" data-fancybox data-close-fancybox>Вернуться к выбору пакета</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="statics/js/libs.js" defer></script>
+  <script src="statics/js/app.js" defer></script>
+</body>
+
+</html>

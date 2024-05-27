@@ -1,0 +1,42 @@
+section.office
+  button.office__sidebar-open(data-element="office__sidebar-open")
+    svg(width='44' height='72' viewbox='0 0 44 72' fill='none' xmlns='http://www.w3.org/2000/svg')
+      path(d='M19.0186 28.5466C18.5307 27.3268 19.4291 26 20.7428 26C21.5021 26 22.1849 26.4623 22.4669 27.1673L25.4058 34.5144C25.7872 35.4681 25.7872 36.5319 25.4058 37.4856L22.4669 44.8327C22.1849 45.5377 21.5021 46 20.7428 46C19.4291 46 18.5307 44.6732 19.0186 43.4534L21.4058 37.4856C21.7872 36.5319 21.7872 35.4681 21.4058 34.5144L19.0186 28.5466Z')
+    .office__sidebar-hint.hint Открыть боковую панель
+  .office__cont
+    .office__header
+      picture.office__logo
+        source(srcset=staticImg('logo-circle.svg') media="(max-width: 767px)")
+        img.office__logo-image(src=staticImg('logo.svg') alt='')
+      a.office__balance.btn-pink(href='#balance' data-fancybox) 0 токенов
+      button.office__user(data-element="office__user")
+        img.office__user-image(src=staticImg('ic_user.svg') alt="")
+      .office__popup(data-element="office__popup")
+        .office__popup-user
+          img.office__popup-avatar(src=staticImg('ic_user.svg') alt="")
+          .office__popup-user-box
+            .office__popup-name Анна Смирнова
+            .office__popup-email test.email@test.com
+        .office__popup-box
+          a.office__popup-line(href='#')
+            img.office__popup-line-icon(src=staticImg('ic_settings.svg') alt='')
+            .office__popup-line-span Настройки
+          a.office__popup-line(href='#settings' data-fancybox)
+            img.office__popup-line-icon(src=staticImg('ic_help.svg') alt='')
+            .office__popup-line-span Помощь
+        .office__popup-box
+          a.office__popup-line(href='#help' data-fancybox)
+            img.office__popup-line-icon(src=staticImg('ic_exit.svg') alt='')
+            .office__popup-line-span Выйти
+      button.office__burger(data-element="office__burger")
+        img.office__burger-icon(src=staticImg('ic_office_burger.svg') alt='')
+    .office__area
+      img.office__icon(src=staticImg('logo-circle.svg') alt='')
+      .office__title Как я могу Вам помочь?
+      .office__text
+        | Узнайте возможности и советы по тому, как правильно формулировать вопрос для нейросети -
+        |
+        a(href="#advice" data-fancybox) здесь.
+    label.office__search
+      input.office__search-input.input.input_white(placeholder="Сообщение для АстроИИ" type='text')
+      img.office__search-icon(src=staticImg('search-icon-arrow.svg') alt="")

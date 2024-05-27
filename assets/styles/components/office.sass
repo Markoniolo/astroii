@@ -1,0 +1,191 @@
+.office
+  flex-grow: 1
+  padding: 20px 0 32px
+  +bgIcon('lk-layout/lk-layout-bg.svg')
+  background-size: cover
+  @include media(sm)
+    +bgIcon('lk-layout/lk-layout-bg_768.svg')
+    background-size: cover
+  @include media(xs)
+    +bgIcon('lk-layout/lk-layout-bg_360.svg')
+    background-size: cover
+
+.office__sidebar-open
+  width: 44px
+  height: 72px
+  position: absolute
+  top: 50%
+  left: 0
+  transform: translateY(-50%)
+  path
+    fill: rgba(white, .5)
+    transition-property: fill
+    transition-duration: $transition-duration
+  &:hover
+    path
+      fill: rgba(white, 1)
+    .office__sidebar-hint
+      opacity: 1
+  @include media(xs)
+    display: none
+
+.office__sidebar-hint
+
+.office__cont
+  padding: 0 20px
+  min-height: calc(100vh - 52px)
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.office__header
+  display: flex
+  align-items: center
+
+.office__logo
+  width: 127px
+  @include media(xs)
+    width: 34px
+
+.office__logo-image
+  height: 34px
+  @include media(xs)
+    height: 34px
+
+.office__balance
+  margin-left: auto
+  padding: 5px 12px
+  font-size: 16px
+  border-radius: 8px
+  &::before
+    content: ''
+    width: 20px
+    height: 20px
+    margin-right: 8px
+    +bgIcon('logo-circle.svg')
+
+.office__user
+  margin-left: 24px
+  width: 34px
+  height: 34px
+
+.office__user-image
+  border-radius: 50%
+
+.office__popup
+  position: absolute
+  top: 66px
+  right: 20px
+  border: 1px solid rgba(255, 255, 255, 0.2)
+  border-radius: 16px
+  padding: 18px 32px 19px 18px
+  width: 198px
+  background: #351645
+  opacity: 0
+  pointer-events: none
+  @include media(xs)
+    right: 60px
+
+.office__popup.active
+  opacity: 1
+  pointer-events: all
+
+.office__popup-user
+  display: flex
+
+.office__popup-avatar
+  border-radius: 50%
+  margin-right: 8px
+  flex-shrink: 0
+  width: 28px
+  height: 28px
+
+.office__popup-user-box
+
+.office__popup-name
+  font-size: 14px
+  line-height: 130%
+  color: $pink
+  font-family: $font_family_second
+
+.office__popup-email
+  font-size: 12px
+  line-height: 130%
+  color: rgba(243, 207, 255, 0.5)
+  font-family: $font_family_second
+
+.office__popup-box
+  padding-top: 16px
+  margin-top: 16px
+  border-top: 1px solid rgba(243, 207, 255, 0.2)
+
+.office__popup-line
+  display: flex
+  align-items: center
+  text-decoration: none
+  &:not(:first-of-type)
+    margin-top: 16px
+
+.office__popup-line-icon
+  flex-shrink: 0
+  margin-right: 12px
+  width: 14px
+  height: 14px
+
+.office__popup-line-span
+  color: $pink
+  font-size: 14px
+  line-height: 130%
+
+.office__burger
+  display: none
+  @include media(xs)
+    display: block
+    width: 30px
+    height: 30px
+    margin-left: 10px
+    flex-shrink: 0
+
+.office__area
+  display: flex
+  flex-direction: column
+  max-width: 488px
+  margin: 100px auto
+
+.office__icon
+  margin: 0 auto 12px
+  width: 60px
+  height: 60px
+
+.office__title
+  margin-bottom: 12px
+  font-size: 24px
+  line-height: 130%
+  text-align: center
+  color: $pink
+  font-family: $font_family_second
+
+.office__text
+  font-size: 16px
+  line-height: 140%
+  text-align: center
+  color: $pink
+  a
+    font-weight: 700
+    text-decoration: underline
+    text-decoration-skip-ink: none
+    color: #fff
+
+.office__search
+  position: relative
+
+.office__search-input
+  padding: 16px 16px 17px
+
+.office__search-icon
+  width: 30px
+  height: 30px
+  position: absolute
+  top: 12px
+  right: 12px
+  border-radius: 8px

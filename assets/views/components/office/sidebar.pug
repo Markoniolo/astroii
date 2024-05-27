@@ -1,0 +1,11 @@
+.sidebar(data-element="sidebar")
+  .sidebar__inner
+    button.sidebar__close(data-element="sidebar__close")
+      img.sidebar__close-icon(src=staticImg('ic_sidebar_close.svg') alt='')
+    button.sidebar__arrow-close(data-element="sidebar__arrow-close")
+      .sidebar__hint.hint Закрыть боковую панель
+    .sidebar__title Мои консультации
+    label.sidebar__search
+      input.sidebar__search-input.input(placeholder="Поиск" type='text')
+    button.sidebar__consult.btn-pink Новая консультация
+.sidebar__layer(data-element="sidebar__layer")

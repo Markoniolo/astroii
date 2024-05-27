@@ -89,3 +89,24 @@
   font-size: 12px
   line-height: 140%
   color: rgba(243, 207, 255, 0.5)
+
+.office-wrap
+  display: flex
+
+.hint
+  pointer-events: none
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  left: 100%
+  white-space: nowrap
+  opacity: 0
+  transition-property: opacity
+  transition-duration: $transition-duration
+  font-size: 14px
+  line-height: 130%
+  color: #fff
+  padding: 10px 11px 10px 16px
+  +bgIcon('sidebar-hint-bg.svg')
+  @include media(lg)
+    display: none

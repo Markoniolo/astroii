@@ -1,0 +1,33 @@
+-
+  const balanceList = [
+    { count: '5 токенов', price: '500 руб.', href: "#success" },
+    { count: '10 токенов', price: '1 000 руб.', href: "#success" },
+    { count: '15 токенов', price: '1 500 руб.', href: "#wrong" },
+    { count: '50 токенов', price: '5 000 руб.', href: "#wrong" },
+  ]
+
+.balance#balance
+  .balance__inner
+    .balance__top
+      .balance__wrap
+        .balance__title.balance__title_nowrap Ваш баланс
+        .balance__now
+          span.balance__now-value 100
+          |
+          | токенов
+      .balance__text.
+        Товарищи! рамки и место обучения кадров играет важную роль в формировании систем массового участия.
+        Задача организации, в особенности же новая модель организационной деятельности влечет за собой процесс
+        внедрения и модернизации систем массового участия.
+    .balance__bottom
+      .balance__title Выберите пакет для пополнения
+      .balance__list
+        each item, index in balanceList
+          a.balance__item(href=item.href data-fancybox data-close-fancybox)
+            picture.balance__picture
+              img.balance__image(src=staticImg(`balance/ic_balance_token_${index+1}.png`) alt='')
+            .balance__count= item.count
+            .balance__price.btn-pink= item.price
+
+
+
