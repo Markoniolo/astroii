@@ -1,0 +1,20 @@
+extends ../_layout/lk-layout
+block lk-layout-content
+  form.lk-layout__box.lk-modal-box
+    .lk-layout__title.lk-title Авторизация
+    label.lk-layout__label.error
+      span.lk-layout__label-placeholder.input-placeholder E-mail
+      input.lk-layout__input.input(type="email" required)
+    label.lk-layout__label
+      span.lk-layout__label-placeholder.input-placeholder Пароль
+      input.lk-layout__input.input(type="text" required)
+    button.lk-layout__submit.btn-pink Войти
+    a.lk-layout__registration.btn-border-white(href="/registration.html")
+      span Создать аккаунт
+    .lk-layout__restore
+      | Забыли пароль?
+      |
+      a(href='registration-pas.html') Восстановить пароль
+    .lk-layout__separator
+      span Или
+    a.lk-layout__tg.btn-blue-tg(href='/login-tg.html') Войти через TG-бота

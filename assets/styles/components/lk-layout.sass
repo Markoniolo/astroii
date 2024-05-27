@@ -1,0 +1,117 @@
+.lk-layout
+  +bgIcon('lk-layout/lk-layout-bg.svg')
+  background-size: cover
+  @include media(sm)
+    +bgIcon('lk-layout/lk-layout-bg_768.svg')
+    background-size: cover
+  @include media(xs)
+    +bgIcon('lk-layout/lk-layout-bg_360.svg')
+    background-size: cover
+
+.lk-layout__cont
+
+.lk-layout__logo
+  position: absolute
+  z-index: 1
+  width: 85px
+  top: 40px
+  left: 50%
+  transform: translateX(-50%)
+
+.lk-layout__logo-image
+  height: 64px
+
+.lk-layout__content
+  padding: 150px 0
+  min-height: 100vh
+  display: flex
+  align-items: center
+  justify-content: center
+
+.lk-layout__box
+
+.lk-layout__title
+  margin-bottom: 16px
+
+.lk-layout__text
+  margin-bottom: 20px
+  font-size: 14px
+  line-height: 140%
+  color: rgba(243, 207, 255, 0.64)
+  span
+    color: $pink
+
+.lk-layout__submit
+  margin-top: 20px
+  width: 100%
+
+.lk-layout__label
+  &:not(:first-of-type)
+    margin-top: 10px
+
+.lk-layout__input-placeholder
+
+.lk-layout__input
+
+.lk-layout__back
+  display: block
+  margin-top: 24px
+  font-size: 16px
+  line-height: 130%
+  text-align: center
+  color: #fff
+  text-decoration: none
+
+.lk-layout__tg
+  width: 100%
+
+.lk-layout__code-area
+  margin-bottom: 20px
+  display: flex
+  gap: 0 8px
+  cursor: pointer
+
+.lk-layout__code-input
+  text-align: center
+  padding: 9px
+  font-weight: 700
+  font-size: 30px
+  line-height: 140%
+  color: white
+  pointer-events: none
+
+.lk-layout__restore
+  font-size: 14px
+  line-height: 130%
+  text-align: center
+  color: rgba(243, 207, 255, 0.64)
+  a
+    font-weight: 700
+    text-decoration: underline
+    text-decoration-skip-ink: none
+    color: #fff
+
+.lk-layout__separator
+  text-align: center
+  margin: 20px 0
+  font-size: 18px
+  line-height: 140%
+  color: rgba(243, 207, 255, 0.5)
+  position: relative
+  span
+    padding: 0 6px
+    position: relative
+    z-index: 1
+    background-color: #270735
+  &::before
+    content: ''
+    height: 1px
+    position: absolute
+    top: 50%
+    left: 0
+    right: 0
+    background-color: rgba(243, 207, 255, 0.2)
+
+.lk-layout__registration
+  margin-top: 16px
+  margin-bottom: 12px

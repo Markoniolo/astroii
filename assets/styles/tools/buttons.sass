@@ -32,17 +32,56 @@
   border-radius: 16px
   display: inline-flex
   align-items: center
-  //box-shadow: inset 0 0 16px 2px rgba(242, 169, 255, 0.42)
-  //background: #461153
+  justify-content: center
   +bgIcon('btn_pink_bg.png')
   font-size: 18px
   line-height: 130%
   color: $white
   padding: 18px 32px 19px
   font-family: $font_family_second
+
+.btn-pink_tg
+  position: relative
   &::after
     content: ''
     margin-left: 20px
+    width: 20px
+    height: 16px
+    +bgIcon('ic_tg_white.svg')
+
+.btn-border-white
+  +btn
+  display: block
+  text-align: center
+  color: #fff
+  border-radius: 16px
+  background: linear-gradient(to right bottom, rgba(#fff, .64), rgba(#fff, .2))
+  padding: 1px
+  span
+    font-family: $font_family_second
+    display: block
+    border-radius: 16px
+    background-color: #270735
+    font-size: 16px
+    line-height: 130%
+    padding: 16px
+
+.btn-blue-tg
+  +btn
+  border-radius: 16px
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  background-color: #239ad6
+  font-size: 16px
+  line-height: 130%
+  color: $white
+  padding: 16px 16px 17px
+  font-family: $font_family_second
+  position: relative
+  &::after
+    content: ''
+    margin-left: 12px
     width: 20px
     height: 16px
     +bgIcon('ic_tg_white.svg')

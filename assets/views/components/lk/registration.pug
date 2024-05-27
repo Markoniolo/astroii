@@ -1,0 +1,9 @@
+extends ../_layout/lk-layout
+block lk-layout-content
+  form.lk-layout__box.lk-modal-box
+    .lk-layout__title.lk-title Регистрация
+    label.lk-layout__label
+      span.lk-layout__label-placeholder.input-placeholder E-mail
+      input.lk-layout__input.input(type="email" required)
+    a.lk-layout__submit.btn-pink(href="/registration-pas.html") Продолжить
+    a.lk-layout__back.lk-layout-back(href="/login.html") Вернуться

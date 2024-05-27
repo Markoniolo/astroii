@@ -1,0 +1,14 @@
+extends ../_layout/lk-layout
+block lk-layout-content
+  form.lk-layout__box.lk-modal-box
+    .lk-layout__title.lk-title Вам был отправлен пароль!
+    .lk-layout__text
+      | На почту
+      |
+      span test.email@test.com
+      |
+      | был отправлен Ваш пароль для авторизации. Введите его в нижнем поле, чтобы войти в аккаунт.
+    label.lk-layout__label
+      span.lk-layout__label-placeholder.input-placeholder Пароль
+      input.lk-layout__input.input(type="text" required)
+    a.lk-layout__submit.btn-pink(href="/registration-pas.html") Войти
