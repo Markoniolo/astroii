@@ -7,6 +7,13 @@
     text-align: center
     margin-bottom: 4px
 
+.office-modal_change-pas, .office-modal_bind-tg, .office-modal_code-tg, .office-modal_start, .office-modal_help
+  max-width: 408px
+
+.office-modal_start, .office-modal_help
+  .office-modal__description
+    margin-bottom: 16px
+
 .office-modal__inner
 
 .office-modal__success-icon
@@ -36,3 +43,92 @@
 .office-modal__button
   margin-top: 20px
   width: 100%
+  font-size: 16px
+  line-height: 130%
+  padding: 16px
+
+.office-modal__label
+  &:not(:first-of-type)
+    margin-top: 10px
+
+.office-modal__input
+
+.office-modal__btns
+  margin-top: 20px
+  display: flex
+  justify-content: space-between
+  @include media(xs)
+    flex-direction: column
+    gap: 16px 0
+
+.office-modal__btn
+  width: calc(50% - 8px)
+  font-size: 16px
+  line-height: 130%
+  @include media(xs)
+    width: 100%
+
+.office-modal__btn.btn-pink
+  padding: 16px
+  @include media(xs)
+    order: -1
+
+.office-modal__textarea
+
+.office-modal__faq
+  margin-top: 24px
+
+.office-modal__faq-item
+  &:not(:last-of-type)
+    margin-bottom: 6px
+    border-bottom: 1px solid rgba(243, 207, 255, 0.64)
+  padding: 6px
+  &.active
+    .office-modal__faq-title
+      color: #ffffff
+      svg
+        transform: rotate(90deg)
+      path
+        fill: #ffffff
+
+.office-modal__faq-title
+  font-size: 14px
+  line-height: 140%
+  color: rgba(243, 207, 255, 0.64)
+  display: flex
+  align-items: center
+  transition-duration: $transition-duration
+  transition-property: color
+  svg
+    margin-right: 8px
+    flex-shrink: 0
+    width: 12px
+    height: 12px
+    transition-duration: $transition-duration
+    transition-property: transform
+  path
+    fill: rgba($pink, .64)
+
+
+.office-modal__faq-box
+  transition-duration: 0.5s
+  transition-property: max-height
+  max-height: 0
+  overflow: hidden
+
+.office-modal__faq-inner
+  padding: 4px 0 6px 20px
+
+.office-modal__faq-text
+  font-size: 14px
+  line-height: 140%
+  color: rgba(255, 255, 255, 0.5)
+
+.office-modal__token-price
+  margin-top: 24px
+  font-size: 14px
+  line-height: 140%
+  color: $pink
+  span
+    color: #ffffff
+    font-weight: 700

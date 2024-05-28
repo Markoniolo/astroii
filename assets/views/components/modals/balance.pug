@@ -23,7 +23,7 @@
       .balance__title Выберите пакет для пополнения
       .balance__list
         each item, index in balanceList
-          a.balance__item(href=item.href data-fancybox data-close-fancybox)
+          a.balance__item(href=item.href data-fancybox data-fancybox-close-current)
             picture.balance__picture
               img.balance__image(src=staticImg(`balance/ic_balance_token_${index+1}.png`) alt='')
             .balance__count= item.count

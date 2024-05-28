@@ -1,42 +1,97 @@
-section.office
-  button.office__sidebar-open(data-element="office__sidebar-open")
-    svg(width='44' height='72' viewbox='0 0 44 72' fill='none' xmlns='http://www.w3.org/2000/svg')
-      path(d='M19.0186 28.5466C18.5307 27.3268 19.4291 26 20.7428 26C21.5021 26 22.1849 26.4623 22.4669 27.1673L25.4058 34.5144C25.7872 35.4681 25.7872 36.5319 25.4058 37.4856L22.4669 44.8327C22.1849 45.5377 21.5021 46 20.7428 46C19.4291 46 18.5307 44.6732 19.0186 43.4534L21.4058 37.4856C21.7872 36.5319 21.7872 35.4681 21.4058 34.5144L19.0186 28.5466Z')
-    .office__sidebar-hint.hint Открыть боковую панель
-  .office__cont
-    .office__header
-      picture.office__logo
-        source(srcset=staticImg('logo-circle.svg') media="(max-width: 767px)")
-        img.office__logo-image(src=staticImg('logo.svg') alt='')
-      a.office__balance.btn-pink(href='#balance' data-fancybox) 0 токенов
-      button.office__user(data-element="office__user")
-        img.office__user-image(src=staticImg('ic_user.svg') alt="")
-      .office__popup(data-element="office__popup")
-        .office__popup-user
-          img.office__popup-avatar(src=staticImg('ic_user.svg') alt="")
-          .office__popup-user-box
-            .office__popup-name Анна Смирнова
-            .office__popup-email test.email@test.com
-        .office__popup-box
-          a.office__popup-line(href='#')
-            img.office__popup-line-icon(src=staticImg('ic_settings.svg') alt='')
-            .office__popup-line-span Настройки
-          a.office__popup-line(href='#settings' data-fancybox)
-            img.office__popup-line-icon(src=staticImg('ic_help.svg') alt='')
-            .office__popup-line-span Помощь
-        .office__popup-box
-          a.office__popup-line(href='#help' data-fancybox)
-            img.office__popup-line-icon(src=staticImg('ic_exit.svg') alt='')
-            .office__popup-line-span Выйти
-      button.office__burger(data-element="office__burger")
-        img.office__burger-icon(src=staticImg('ic_office_burger.svg') alt='')
-    .office__area
-      img.office__icon(src=staticImg('logo-circle.svg') alt='')
-      .office__title Как я могу Вам помочь?
-      .office__text
-        | Узнайте возможности и советы по тому, как правильно формулировать вопрос для нейросети -
-        |
-        a(href="#advice" data-fancybox) здесь.
-    label.office__search
-      input.office__search-input.input.input_white(placeholder="Сообщение для АстроИИ" type='text')
-      img.office__search-icon(src=staticImg('search-icon-arrow.svg') alt="")
+mixin office(mod)
+  section.office
+    button.office__sidebar-open(data-element="office__sidebar-open")
+      svg(width='44' height='72' viewbox='0 0 44 72' fill='none' xmlns='http://www.w3.org/2000/svg')
+        path(d='M19.0186 28.5466C18.5307 27.3268 19.4291 26 20.7428 26C21.5021 26 22.1849 26.4623 22.4669 27.1673L25.4058 34.5144C25.7872 35.4681 25.7872 36.5319 25.4058 37.4856L22.4669 44.8327C22.1849 45.5377 21.5021 46 20.7428 46C19.4291 46 18.5307 44.6732 19.0186 43.4534L21.4058 37.4856C21.7872 36.5319 21.7872 35.4681 21.4058 34.5144L19.0186 28.5466Z')
+      .office__sidebar-hint.hint Открыть боковую панель
+    .office__cont
+      .office__header
+        picture.office__logo
+          source(srcset=staticImg('logo-circle.svg') media="(max-width: 767px)")
+          img.office__logo-image(src=staticImg('logo.svg') alt='')
+        a.office__balance.btn-pink(href='#balance' data-fancybox) 0 токенов
+        button.office__user(data-element="office__user")
+          img.office__user-image(src=staticImg('ic_user.svg') alt="")
+        .office__popup(data-element="office__popup")
+          .office__popup-user
+            img.office__popup-avatar(src=staticImg('ic_user.svg') alt="")
+            .office__popup-user-box
+              .office__popup-name Анна Смирнова
+              .office__popup-email test.email@test.com
+          .office__popup-box
+            a.office__popup-line(href='#settings' data-fancybox)
+              img.office__popup-line-icon(src=staticImg('ic_settings.svg') alt='')
+              .office__popup-line-span Настройки
+            a.office__popup-line(href='#help' data-fancybox)
+              img.office__popup-line-icon(src=staticImg('ic_help.svg') alt='')
+              .office__popup-line-span Помощь
+          .office__popup-box
+            a.office__popup-line(href='#help' data-fancybox)
+              img.office__popup-line-icon(src=staticImg('ic_exit.svg') alt='')
+              .office__popup-line-span Выйти
+        button.office__burger(data-element="office__burger")
+          img.office__burger-icon(src=staticImg('ic_office_burger.svg') alt='')
+      .office__inner(data-simplebar)
+        .office__inner-box
+          if mod === 'article'
+            .office__article
+              .office__question
+                .office__question-value Что ждёт меня в будущем?
+              .office__article-wrap
+                img.office__article-icon(src=staticImg('ic_bot_avatar.svg') alt='')
+                .office__article-inner
+                  h2
+                    | Для Вашего запроса потребуется время:
+                    |
+                    span 10 мин. 59 сек.
+                    |
+                    | Пожалуйста, ожидайте
+              .office__article-await
+                img.office__article-await-icon(src=staticImg('ic_await.svg') alt='')
+                .office__article-await-note Ожидание...
+                .office__article-await-left 10 минут 59 секунд
+            .office__article
+              .office__question
+                .office__question-value Что ждёт меня в будущем?
+              .office__article-wrap
+                img.office__article-icon(src=staticImg('ic_bot_avatar.svg') alt='')
+                .office__article-inner
+                  h2 Гороскоп на будущее: Взгляд в звёзды
+                  p.
+                    Величие звёздного неба всегда манило человека, внушая ему трепет и желание постичь неизведанное.
+                    Астрология, древняя наука, позволяет нам заглянуть за занавес времени и понять, что ждёт нас впереди.
+                    В этом тексте мы попытаемся осветить будущее каждого знака Зодиака, обращая внимание на основные
+                    тенденции и события, которые могут произойти в ближайшем будущем.
+                  h3 Овен (21 марта — 19 апреля)
+                  p.
+                    Овны, будьте готовы к волнующим переменам! В ближайшие месяцы ваша жизнь наполнится энергией и
+                    новыми возможностями. Марс, ваш управитель, будет поддерживать вас, давая силу и решительность для
+                    реализации самых смелых планов. Ожидайте продвижения в карьере и личной жизни, но помните, что для
+                    достижения успеха потребуется терпение и усердие.
+                  h3 Телец (20 апреля — 20 мая)
+                  p.
+                    Для Тельцов наступает время внутреннего роста и самопознания. Венера, ваша правящая планета, будет
+                    направлять ваше внимание на вопросы любви и взаимоотношений. Это идеальное время для укрепления
+                    старых связей и завязывания новых. В профессиональной сфере возможны неожиданные предложения и
+                    перспективные проекты, которые помогут вам продемонстрировать свои таланты.
+                  h3 Близнецы (21 мая — 20 июня)
+                  p.
+                    Близнецы, готовьтесь к периоду интенсивного общения и обмена идеями. Меркурий, ваша правящая планета,
+                    принесет вам множество новых контактов и интересных знакомств. Это время идеально для обучения,
+                    путешествий и расширения горизонтов. Будьте открыты к новым знаниям и не бойтесь экспериментировать.
+                    Ваша способность адаптироваться к изменениям будет ключом к успеху.
+          else
+            .office__area
+              img.office__icon(src=staticImg('logo-circle.svg') alt='')
+              .office__title Как я могу Вам помочь?
+              .office__text
+                | Узнайте возможности и советы по тому, как правильно формулировать вопрос для нейросети -
+                |
+                a(href="#advice" data-fancybox) здесь.
+      form.office__search(data-element="office__search")
+        textarea.office__search-textarea.input.input_white(placeholder="Сообщение для АстроИИ" type='text' data-element="office__search-textarea")
+        button.office__search-submit(disabled data-element="office__search-submit")
+          svg.office__search-icon(width='30' height='30' viewbox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg')
+            rect(width='30' height='30')
+            path(d='M15.6187 7.38128C15.277 7.03957 14.723 7.03957 14.3813 7.38128L8.81281 12.9497C8.47111 13.2915 8.47111 13.8455 8.81281 14.1872C9.15452 14.5289 9.70854 14.5289 10.0503 14.1872L15 9.23744L19.9497 14.1872C20.2915 14.5289 20.8455 14.5289 21.1872 14.1872C21.5289 13.8455 21.5289 13.2915 21.1872 12.9497L15.6187 7.38128ZM15.875 22L15.875 8L14.125 8L14.125 22L15.875 22Z' fill='#351645')
+

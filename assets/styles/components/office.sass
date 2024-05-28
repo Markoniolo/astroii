@@ -1,5 +1,7 @@
 .office
-  flex-grow: 1
+  width: 100%
+  transition-property: width
+  transition-duration: $transition-duration
   padding: 20px 0 32px
   +bgIcon('lk-layout/lk-layout-bg.svg')
   background-size: cover
@@ -74,6 +76,7 @@
 
 .office__popup
   position: absolute
+  z-index: 10
   top: 66px
   right: 20px
   border: 1px solid rgba(255, 255, 255, 0.2)
@@ -83,6 +86,8 @@
   background: #351645
   opacity: 0
   pointer-events: none
+  transition-property: opacity
+  transition-duration: $transition-duration
   @include media(xs)
     right: 60px
 
@@ -146,11 +151,34 @@
     margin-left: 10px
     flex-shrink: 0
 
+.office__inner
+  height: calc(100vh - 142px)
+  padding: 27px 20px 70px 0
+  width: calc(100% + 20px)
+  position: relative
+  &::before
+    content: ''
+    background: linear-gradient(0deg, #21042f 0%, rgba(33, 4, 47, 0) 100%)
+    height: 105px
+    position: absolute
+    z-index: 1
+    bottom: 0
+    left: 0
+    right: 0
+
+.office__inner-box
+  max-width: 800px
+  width: 100%
+  margin: 0 auto
+
 .office__area
+  padding: 50px 0
   display: flex
   flex-direction: column
+  justify-content: center
   max-width: 488px
-  margin: 100px auto
+  margin: 0 auto
+  height: calc(100vh - 142px)
 
 .office__icon
   margin: 0 auto 12px
@@ -178,14 +206,100 @@
 
 .office__search
   position: relative
+  max-width: 800px
+  width: 100%
+  margin: 0 auto
 
-.office__search-input
-  padding: 16px 16px 17px
+.office__search-textarea
+  padding: 16px 54px 17px 16px
+  height: 56px
+  min-height: 56px
+  max-height: 200px
+
+.office__search-submit
+  position: absolute
+  bottom: 12px
+  right: 12px
+  rect
+    fill: rgba(#fff, 1)
+    transition-property: fill
+    transition-duration: $transition-duration
+  &:disabled
+    cursor: default
+    rect
+      fill: rgba(#fff, .1)
 
 .office__search-icon
   width: 30px
   height: 30px
-  position: absolute
-  top: 12px
-  right: 12px
   border-radius: 8px
+
+.office__article
+
+.office__question
+  margin-bottom: 40px
+  text-align: right
+
+.office__question-value
+  display: inline-block
+  font-size: 16px
+  line-height: 130%
+  color: $pink
+  padding: 12px 20px 11px
+  background: #351645
+  border-radius: 24px
+
+.office__article-wrap
+  display: flex
+
+.office__article-icon
+  width: 34px
+  height: 34px
+  margin-right: 24px
+  flex-shrink: 0
+
+.office__article-inner
+  flex-grow: 1
+  h2
+    margin-bottom: 10px
+    font-weight: 700
+    font-size: 20px
+    line-height: 140%
+    color: #fff
+    span
+      color: $orange
+      font-weight: 700
+  h3
+    margin-top: 20px
+    font-weight: 700
+    font-size: 16px
+    line-height: 175%
+    color: #fff
+  p
+    font-weight: 400
+    font-size: 16px
+    line-height: 175%
+    color: #fff
+
+.office__article-await
+  margin: 100px 0
+
+.office__article-await-icon
+  width: 80px
+  height: 80px
+  margin: 0 auto 24px
+
+.office__article-await-note
+  margin-bottom: 20px
+  font-size: 18px
+  line-height: 130%
+  text-align: center
+  color: $pink
+  font-family: $font_family_second
+
+.office__article-await-left
+  font-size: 24px
+  line-height: 130%
+  text-align: center
+  color: #fff
+  font-family: $font_family_second

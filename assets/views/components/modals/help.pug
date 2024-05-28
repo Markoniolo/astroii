@@ -1,0 +1,21 @@
+.office-modal.office-modal_help#help
+  .office-modal__inner
+    .office-modal__title Тех. поддержка
+    .office-modal__description Вы можете описать, сложившуюся у Вас проблему или вопрос в поле ниже. Ответ на Ваш запрос будет выслан на Вашу почту.
+    label.office-modal__label
+      .office-modal__placeholder.input-placeholder Комментарий
+      textarea.office-modal__textarea.input
+    button.office-modal__button.btn-pink(data-fancybox-close-current) Отправить
+    .office-modal__faq
+      each faq in ['Как я могу воспользоваться чат-ботом?','На чём основывается Ваша нейросеть?','Какие аспекты жизни затрагивает нейросеть?','Работает ли нейросеть по натальной карте?',]
+        .office-modal__faq-item(data-element="faq-item")
+          .office-modal__faq-title(data-element="faq-title")
+            svg(width='12' height='12' viewbox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(d='M4.72 2.96C4.42334 2.56446 4.70557 2 5.2 2C5.38885 2 5.56669 2.08892 5.68 2.24L7.6 4.8C8.13333 5.51111 8.13333 6.48889 7.6 7.2L5.68 9.76C5.56669 9.91108 5.38885 10 5.2 10C4.70557 10 4.42334 9.43554 4.72 9.04L6.18182 7.09091C6.66667 6.44444 6.66667 5.55556 6.18182 4.90909L4.72 2.96Z')
+            span= faq
+          .office-modal__faq-box(data-element="faq-box")
+            .office-modal__faq-inner
+              .office-modal__faq-text.
+                Товарищи! рамки и место обучения кадров играет важную роль в формировании систем массового участия.
+                Задача организации, в особенности же новая модель организационной деятельности влечет за собой процесс
+                внедрения и модернизации систем массового участия.

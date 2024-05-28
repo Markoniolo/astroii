@@ -92,6 +92,28 @@
 
 .office-wrap
   display: flex
+  justify-content: space-between
+  overflow-x: hidden
+  &_sidebar-active
+    .office
+      width: calc(100% - 260px)
+      @include media(xs)
+        width: 100%
+    .sidebar
+      width: 260px
+      flex-shrink: 0
+      will-change: width
+      pointer-events: all
+      opacity: 1
+      .sidebar__inner
+        opacity: 1
+        transition-delay: $transition-duration
+        transition-property: opacity
+        transition-duration: $transition-duration
+      @include media(xs)
+        width: 320px
+        & + .sidebar__layer
+          display: block
 
 .hint
   pointer-events: none
@@ -110,3 +132,10 @@
   +bgIcon('sidebar-hint-bg.svg')
   @include media(lg)
     display: none
+
+.simplebar-scrollbar
+  background-color: rgba(255, 255, 255, 0.2)
+  border-radius: 4px
+  width: 8px
+  &::before
+    background-color: transparent

@@ -1,0 +1,34 @@
+.settings#settings
+  .settings__inner
+    .settings__title Настройки
+    .settings__box
+      .settings__avatar
+        .settings__avatar-inner
+          span.settings__placeholder.input-placeholder Аватар
+          .settings__note Мин. размер 200 x 200 px, png, jpg, jpeg
+          label.settings__load
+            .settings__load-view Загрузить
+            input.settings__load-input(type="file")
+        img.settings__avatar-image(src=staticImg('ic_user.svg') alt='')
+    .settings__box
+      .settings__email
+        span.settings__placeholder.input-placeholder E-mail
+        .settings__email-value test.email@test.com
+      .settings__label
+        span.settings__placeholder.input-placeholder Имя
+        input.settings__input.input(type="text" value="Анна Смирнова")
+      .settings__label
+        span.settings__placeholder.input-placeholder Дата рождения
+        input.settings__input.input(type="text" value="01.01.2001")
+    .settings__box
+      .settings__links
+        a.settings__link(href='#bind-tg' data-fancybox data-fancybox-close-current) Привязать TG-аккаунт
+        a.settings__link(href='#change-pas' data-fancybox data-fancybox-close-current) Сменить пароль
+    .settings__box
+      .settings__btns
+        button.settings__btn.btn-border-white
+          span Отменить
+        button.settings__btn.btn-pink Сохранить
+
+
+

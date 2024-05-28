@@ -2,7 +2,7 @@ Fancybox.bind("[data-fancybox]", {
   // Your custom options
 });
 
-const closeFancyboxArray = document.querySelectorAll('[data-close-fancybox]')
+const closeFancyboxArray = document.querySelectorAll('[data-fancybox-close-current]')
 
 if (closeFancyboxArray.length) closeFancyboxArrayInit()
 
@@ -13,7 +13,8 @@ function closeFancyboxArrayInit () {
 }
 
 function closeFancybox () {
-  const content = this.closest('.fancybox__content')
-  const closeBtn = content.querySelector('.is-close-btn')
-  if (closeBtn) closeBtn.click()
+  Fancybox.close()
 }
+
+const office = document.querySelector('.office')
+if (office) Fancybox.show([{ src: "#start", type: "inline" }])
