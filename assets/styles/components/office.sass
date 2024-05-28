@@ -1,4 +1,5 @@
 .office
+  position: relative
   width: 100%
   transition-property: width
   transition-duration: $transition-duration
@@ -205,6 +206,13 @@
     color: #fff
 
 .office__search
+  position: absolute
+  z-index: 5
+  bottom: 32px
+  left: 20px
+  right: 20px
+
+.office__search-inner
   position: relative
   max-width: 800px
   width: 100%
